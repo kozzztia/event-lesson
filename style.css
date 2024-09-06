@@ -1,7 +1,7 @@
 :root {
     --main-color: #333;
-    --background-color: #f4f4f4;
-    --font-size: 16px;
+    --background-color: green;
+    --element-color: #f6f69d;
 }
 
 * {
@@ -11,36 +11,29 @@
     font-family: Arial, sans-serif;
 }
 
-body {
-    background-color: var(--background-color);
-    color: var(--main-color);
-    font-size: var(--font-size);
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-
-#grand{
+.content{
     width: 500px;
     height: 500px;
-    background: red;
-    margin: 100px auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-#parent{
-    width: 300px;
-    height: 300px;
-    background: yellow;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-}
-#child{
-    width: 100px;
-    height: 100px;
-    background: green;
+    background: var(--element-color);
+    padding: 20px;
+    font-size: 36px;
+    color: var(--main-color);
+    resize: none;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 0 50px #000;
+    &:hover, &:focus{
+        box-shadow: 0 0 100px #000;
+    }
 }
