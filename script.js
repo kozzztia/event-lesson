@@ -1,26 +1,15 @@
-const grand = document.getElementById('grand');
-const parent = document.getElementById('parent');
-const child = document.getElementById('child');
+// Створити HTML-сторінку для відображення/редагування тексту. При відкритті сторінки текст відображається за допомогою тега div. При натисканні Ctrl + E, замість div з'являється textarea з тим же текстом, який тепер можна редагувати. При натисканні Ctrl + S, замість textarea з'являється div з уже зміненим текстом. Не забудь вимкнути поведінку за замовчуванням для цих поєднань клавіш.
+// Створити HTML-сторінку з великою таблицею. При кліку на заголовок стовпця, необхідно відсортувати дані цього стовпця. Врахуй, що числові значення повинні сортуватися як числа, а не як рядки.
+// Створити HTML-сторінку з блоком тексту в рамці. Реалізувати можливість змінювати розмір блоку, якщо затиснути мишку в правому нижньому кутку і тягнути її далі.
 
-
-
-document.body.addEventListener('click', e => {
-    console.log(e.target);
+document.body.addEventListener('keydown' , (event)=> {
+    if (event.ctrlKey && event.code === 'KeyS') {
+        event.preventDefault(); 
+        console.log('Ctrl + S натиснуто');
+    }else if((event.ctrlKey && event.code === 'KeyE') ){
+        event.preventDefault(); 
+        console.log('Ctrl + E натиснуто');
+    }
 })
 
-// grand.addEventListener('click', e => {
-//     console.log(e.target)
-//     e.stopPropagation();
-// },{capture : true})
 
-// parent.addEventListener('click', e =>{
-//     console.log(e.target);
-//     e.stopPropagation();
-//     }
-// )
-
-// child.addEventListener('click', e => {
-//     e.stopPropagation();
-//     console.log(e.target)
-// }
-// )
